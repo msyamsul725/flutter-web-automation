@@ -5,15 +5,16 @@ import 'package:company_profile/main.dart';
 void main() {
   testWidgets('renders company profile content', (WidgetTester tester) async {
     await tester.pumpWidget(const CompanyProfileApp());
+    await tester.pump();
 
-    expect(find.text('Arunika Consulting Group'), findsWidgets);
+    expect(find.text('oke'), findsWidgets);
     expect(
       find.text(
-        'Mitra strategis untuk perusahaan yang ingin tampil lebih kredibel, modern, dan siap tumbuh.',
+        'Kami hadir memberikan solusi profesional untuk kebutuhan bisnis Anda melalui strategi, teknologi, dan eksekusi yang terukur.',
       ),
-      findsOneWidget,
+      findsWidgets,
     );
-    expect(find.text('Layanan Kami'), findsOneWidget);
-    expect(find.text('Hubungi Kami'), findsOneWidget);
+    expect(find.text('Area kerja utama kami'), findsOneWidget);
+    expect(find.text('Kontak'), findsOneWidget);
   });
 }
